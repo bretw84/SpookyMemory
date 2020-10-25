@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100%;
+    background: url('../img/langing-bkd.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+body::before {
+
+    position: fixed;
+    content: "";
+    height: 150px;
+    width: 150px;
+    bottom: 0px;
+    right: 0px;
+    background: url('../img/jigsaw.jpg') no-repeat;
+    background-size: 100%;
+    opacity: .2;
+}
+
+.enterGameContainer {
+    position: relative;
+    top: 45%;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.enterGameBtn {
+    background:   orange;                  
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    top: 35%;
+    box-shadow: inset 0 1px 0 hsl(34, 100%, 50%),
+                0 2px 0 hsl(34, 100%, 20%),
+                0 3px 0 hsl(34, 100%, 18%),
+                0 4px 0 hsl(34, 100%, 16%),
+                0 5px 0 hsl(34, 100%, 14%),
+                0 6px 0 hsl(34, 100%, 12%),
+                0 7px 0 hsl(34, 100%, 10%),
+                0 8px 0 hsl(34, 100%, 8%),
+                0 9px 0 hsl(34, 100%, 6%);
+}
+
+    .enterGameBtn:hover {
+        background: -webkit-radial-gradient( hsl(34, 100%, 45%), hsl(34, 100%, 35%) );
+        background: -o-radial-gradient( hsl(34, 100%, 45%), hsl(34, 100%, 35%) );
+        background: -mox-radial-gradient( hsl(34, 100%, 45%), hsl(34, 100%, 35%) );
+        background: radial-gradient( hsl(34, 100%, 45%), hsl(34, 100%, 35%) );
+    }
+
+    .enterGameBtn:active {
+        background: -webkit-radial-gradient( hsl(34, 100%, 43%), hsl(34, 100%, 33%) );
+        background: -o-radial-gradient( hsl(34, 100%, 43%), hsl(34, 100%, 33%) );
+        background: -mox-radial-gradient( hsl(34, 100%, 43%), hsl(34, 100%, 33%) );
+        background: radial-gradient( hsl(34, 100%, 43%), hsl(34, 100%, 33%) );
+        
+        top: 2px;
+
+        box-shadow: inset 0 1px 0 hsl(34, 100%, 50%),
+                    0 2px 0 hsl(34, 100%, 20%),
+                    0 3px 0 hsl(34, 100%, 18%),
+                    0 4px 0 hsl(34, 100%, 16%),
+                    0 5px 0 hsl(34, 100%, 14%),
+                    0 6px 0 hsl(34, 100%, 12%),
+                    0 7px 0 hsl(34, 100%, 10%);
+    }
+
+.enterGametxt {
+    position: relative;
+    top: 32%;
+    left: 10%;
+    font-family: creeper;
+    font-size: 3rem;
+    display: inline-block;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 2px 2px 0 #ffffff, 7px 7px 0 rgba(0,0,0,0.1);
+}
