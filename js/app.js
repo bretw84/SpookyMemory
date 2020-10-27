@@ -35,6 +35,7 @@ $(document).ready(function() {
     var id = $(this).attr('id');
     var icon = $('#'+id+' .icon');
     selected.push(id);
+
     $('.ghost').toggle();
     $('.ghostShadow').toggle();
 
