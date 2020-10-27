@@ -29,7 +29,7 @@ body {
   min-height:162px;
   cursor:url('../img/eyeball.png'), auto;
     margin:20px;
-    box-shadow:0 0 5px 1px purple;
+    box-shadow:0 0 7px 6px white;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -41,7 +41,10 @@ body {
     background-size: 20px 20px;
 }
 
-.card-body {padding:0;}
+.card-body {
+  padding:0;
+  background-color: #ff4814;
+}
 
 .card h2 {
   font-size:100px;
@@ -52,7 +55,49 @@ body {
   padding:1.25rem;
   display:block;
   background:rgba(0,0,0,0.5);
-  box-shadow:0 0 6px 3px orange;
+  box-shadow:0 0 40px 2px orange;
+}
+
+/* Ghost Styling */
+
+.ghost {
+  position: absolute;
+  right: 31%;
+  top: 0;
+  width: 100px;
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+
+.ghostShadow {
+  position: absolute;
+  bottom: 0;
+  right: 17%;
+  animation: shrink 3s ease-out infinite;
+  transform-origin: center center;
+}
+
+ellipse {transform-origin: center center;}
+
+@keyframes shrink {
+  0% {
+    width: 60%;
+    margin: 0 5%;
+  }
+  50% {
+    width: 30%;
+    margin: 0 18%;
+  }
+  100% {
+    width: 60%;
+    margin: 0 5%;
+  }
+  
 }
 
 /* Style the video: 100% width and height to cover the entire window */
