@@ -4,6 +4,7 @@ body {
     background: url('../img/langing-bkd.jpg') no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
+
 }
 
 body::before {
@@ -635,4 +636,5 @@ body::before {
       margin-top: calc(93px + 35px);
     }
   }
-  
+
+}
