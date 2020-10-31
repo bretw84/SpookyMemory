@@ -51,6 +51,8 @@ body {
   margin:0;
 }
 
+.card.flipped {transform: rotateY( 180deg);}
+
 .icon {
   padding:1.25rem;
   display:block;

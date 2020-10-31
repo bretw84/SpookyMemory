@@ -3,49 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spooky Memory</title>
+
+    <title>Caution, Very Scary! - Spooky Memory</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/landing.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <script src='http://use.edgefonts.net/creepster.js'></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    <script src="https://kit.fontawesome.com/955217f2ce.js" crossorigin="anonymous"></script>
-
-    <script src="js/app.js"></script>
-    <script src="js/snowfall.min.js"></script>
-
 </head>
 <body>
-    <video autoplay muted loop id="myVideo">
-    <source src="https://what2do.bjwtech.com/Halloween5 1-1.m4v" type="video/mp4">
-    </video>
-    <span class="right setting ease"><i class="fas fa-spider on"></i></span>
-    <div class="container-fluid">
-        <div class="row">
-           
-        </div>
+    <div class='spider_0'>
+        <div class='eye left'></div>
+        <div class='eye right'></div>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+      </div>
+      <div class='spider_1'>
+        <div class='eye left'></div>
+        <div class='eye right'></div>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+      </div>
+      <div class='spider_2'>
+        <div class='eye left'></div>
+        <div class='eye right'></div>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+      </div>
+      <div class='spider_3'>
+        <div class='eye left'></div>
+        <div class='eye right'></div>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+      </div>
+      <div class='spider_4'>
+        <div class='eye left'></div>
+        <div class='eye right'></div>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+      </div>
+      <div class='spider_5'>
+        <div class='eye left'></div>
+        <div class='eye right'></div>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg left'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+        <span class='leg right'></span>
+      </div>
+      <h1 class="halloween">
+        Happy Halloween!
+      </h1>
+      <img class='web-right' src='http://www.scandiafun.com/images/spiderweb-corner-right.png'>
+      <img class='web-left' src='http://www.scandiafun.com/images/spiderweb-corner-right.png'>
+    <div class="enterGameContainer">
+        <a href="game.html">
+            <div class="enterGameBtn">
+                <strong class="enterGametxt">Enter</strong>
+            </div>
+        </a>
     </div>
-    <script>
-    $(document).ready(function() {
-      $(".fa-spider").click(function(){
-          console.log('clicked spidey');
-        $(this).toggleClass('on');
-        if($(this).hasClass('on')) {
-          $(document).snowfall('clear');
-        } else {
-          $(document).snowfall('clear');
-          $(document).snowfall({
-            image :"img/spider.png", 
-            minSize: 10, 
-            maxSize:30,
-            flakeCount:50,
-            flakeIndex:1
-          });
-        } 
-      });
-    });
-    </script>
 </body>
 </html>
