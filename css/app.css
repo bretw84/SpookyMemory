@@ -23,11 +23,16 @@ body {
     margin-top:20px;
     max-width:1200px;
     position:relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .card {
-  min-height:162px;
-  cursor:url('../img/eyeball.png'), auto;
+    min-height:162px;
+    cursor:url('../img/hand.png'), auto;
     margin:20px;
     box-shadow:0 0 7px 6px white;
     background:
@@ -41,65 +46,12 @@ body {
     background-size: 20px 20px;
 }
 
-.card-body {
-  padding:0;
-  background-color: #ff4814;
-}
-
-.card h2 {
-  font-size:100px;
-  margin:0;
-}
-
-.card.flipped {transform: rotateY( 180deg);}
-
 .icon {
   padding:1.25rem;
   display:block;
   background:rgba(0,0,0,0.5);
   box-shadow:0 0 40px 2px orange;
-}
-
-/* Ghost Styling */
-
-.ghost {
-  position: absolute;
-  right: 31%;
-  top: 0;
-  width: 100px;
-  animation: float 3s ease-out infinite;
-}
-
-@keyframes float {
-  50% {
-     transform: translate(0, 20px);
-  }
-}
-
-.ghostShadow {
-  position: absolute;
-  bottom: 0;
-  right: 17%;
-  animation: shrink 3s ease-out infinite;
-  transform-origin: center center;
-}
-
-ellipse {transform-origin: center center;}
-
-@keyframes shrink {
-  0% {
-    width: 60%;
-    margin: 0 5%;
-  }
-  50% {
-    width: 30%;
-    margin: 0 18%;
-  }
-  100% {
-    width: 60%;
-    margin: 0 5%;
-  }
-  
+  font-size:100px;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -110,70 +62,31 @@ ellipse {transform-origin: center center;}
     min-width: 100%;
     min-height: 100%;
     opacity:.1;
-  }
+}
   
-  /* Add some content at the bottom of the video/page */
-  .content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  /* Style the button used to pause/play the video */
-  #myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  #myBtn:hover {
-    background: #ddd;
-    color: black;
-  }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
-  .columns {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
 
- }
+
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 
-  .columns {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-  }
 
- }
+
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 
-  .columns {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-  }
 
- }
+
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
 
-  .columns {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-
- }
+}

@@ -23,37 +23,35 @@ $(document).ready(function() {
     ]
   }
 
-  pieces.icons.sort(() => .5 - Math.random());
+  // pieces.icons.sort(() => .5 - Math.random());
+  // A function to generate a random
+  // permutation of arr Fisher-Yates method
+  let randomize = (arr, n) =>
+  {
+  
+      // Start from the last element and swap
+      // one by one. We don't need to run for
+      // the first element that's why i > 0
+      for (let i = n - 1; i > 0; i--)
+      {
+      
+          // Pick a random index from 0 to i inclusive
+          let j = Math.floor(Math.random() * (i + 1));
+  
+          // Swap arr[i] with the element
+          // at random index
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+  }
 
-  // console.log(pieces.icons);
+  let arr = pieces.icons;
+  let n = arr.length;
+  randomize (arr, n);
+
+  console.log(pieces.icons);
 
   for(var i = 0; i < pieces.icons.length; i++) {
-        $('.container-fluid .row').append('<div class="columns"><div id="'+i+'" class="card"><img class="ghost" src="img/ghost.svg"><img class="ghostShadow" src="img/shadow.svg"><div class="card-body"><h2 class="text-center"><span class="icon d-none '+pieces.icons[i]['id']+'">'+pieces.icons[i]['icon']+'</span></h2></div></div></div>');
+        $('.container-fluid').append('<div class="card"><span class="icon">'+pieces.icons[i]['icon']+'</span></div>');
     }
-
-  $('.card').click(function() {
-    var id = $(this).attr('id');
-    var icon = $('#'+id+' .icon');
-    selected.push(id);
-
-    $('.ghost').toggle();
-    $('.ghostShadow').toggle();
-
-    if(selected.length > 1) {
-      $('.icon').each(function() {
-        if(icon.hasClass('selected')) {
-          icon.removeClass('selected');
-          icon.addClass('d-none');
-        }
-        selected.length = 0;
-        console.log(selected.length);
-      });
-    }else {
-      console.log(selected.length);
-      icon.addClass('selected');
-      icon.removeClass('d-none');
-          
-    }
-  });
 
 });
