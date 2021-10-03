@@ -41,12 +41,11 @@ body {
     background-position:center;
 }
 
-.flipped {cursor:not-allowed;}
-
 .flipped .icon {
   display:block;
   background:rgba(0,0,0,0.8);
   box-shadow:0 0 7px 6px blueviolet;
+  cursor:not-allowed;
 }
 
 .icon {
@@ -56,6 +55,24 @@ body {
   box-shadow:0 0 40px 2px ;
   font-size:82px;
   display:none;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.solved .icon {
+  display:block;
+  background:rgba(0,0,0,0.5);
+  box-shadow:0 0 7px 6px green;
+  cursor:not-allowed;
+}
+
+.card.solved {background:#222222;}
+
+.noMatch .icon {
+  box-shadow:0 0 7px 6px red;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
