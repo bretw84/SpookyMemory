@@ -19,6 +19,35 @@ body {
   z-index:99;
 }
 
+h1.bigWinner {
+  position: absolute; 
+  top:50%;
+  transform:translateY(-50%);
+  text-align:center;
+  width:100%;
+  font-family: "Eater", cursive;
+  font-size: 10.5vw;
+  color: green;
+  -moz-animation: flicker 4s 0s infinite;
+  -webkit-animation: flicker 4s 0s infinite;
+  animation: flicker 4s 0s infinite;
+  display:none;
+  line-height:.5;
+}
+
+.bigWinner a {
+  display:inline-block;
+  width:fit-content;
+  font-size:42px;
+  font-family:sans-serif;
+  background:rgba(0,0,0,0.95);
+  color:blueviolet;
+  padding:20px;
+  box-shadow:0 0 10px 0 blueviolet;
+}
+
+.faded {opacity:0.3;}
+
 .container-fluid {
     margin-top:20px;
     max-width:1200px;
@@ -83,6 +112,70 @@ body {
     min-width: 100%;
     min-height: 100%;
     opacity:.1;
+}
+
+@-moz-keyframes flicker {
+  0%,
+    6%,
+    12% {
+    text-shadow: none;
+    color: #111111;
+  }
+  3%,
+    9% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6);
+    color: #fa6701;
+  }
+  60% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6), 0 0 16px rgba(250, 103, 1, 0.4), 0 0 20px rgba(255, 0, 84, 0.2), 0 0 22px rgba(255, 0, 84, 0.1);
+    color: #fa6701;
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6), 0 0 16px rgba(250, 103, 1, 0.4), 0 0 20px rgba(255, 0, 84, 0.2), 0 0 22px rgba(255, 0, 84, 0.1);
+    color: #fa6701;
+  }
+}
+@-webkit-keyframes flicker {
+  0%,
+    6%,
+    12% {
+    text-shadow: none;
+    color: #111111;
+  }
+  3%,
+    9% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6);
+    color: #fa6701;
+  }
+  60% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6), 0 0 16px rgba(250, 103, 1, 0.4), 0 0 20px rgba(255, 0, 84, 0.2), 0 0 22px rgba(255, 0, 84, 0.1);
+    color: #fa6701;
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6), 0 0 16px rgba(250, 103, 1, 0.4), 0 0 20px rgba(255, 0, 84, 0.2), 0 0 22px rgba(255, 0, 84, 0.1);
+    color: #fa6701;
+  }
+}
+@keyframes flicker {
+  0%,
+    6%,
+    12% {
+    text-shadow: none;
+    color: #111111;
+  }
+  3%,
+    9% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6);
+    color: #fa6701;
+  }
+  60% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6), 0 0 16px rgba(250, 103, 1, 0.4), 0 0 20px rgba(255, 0, 84, 0.2), 0 0 22px rgba(255, 0, 84, 0.1);
+    color: #fa6701;
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(250, 103, 1, 0.6), 0 0 16px rgba(250, 103, 1, 0.4), 0 0 20px rgba(255, 0, 84, 0.2), 0 0 22px rgba(255, 0, 84, 0.1);
+    color: #fa6701;
+  }
 }
   
 
