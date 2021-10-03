@@ -31,27 +31,31 @@ body {
 }
 
 .card {
-    min-height:162px;
+    min-height:165px;
     cursor:url('../img/hand.png'), auto;
     margin:20px;
-    box-shadow:0 0 7px 6px white;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
+    box-shadow:0 0 7px 6px orange;
+    background-image:url('../img/cardback.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.flipped {cursor:not-allowed;}
+
+.flipped .icon {
+  display:block;
+  background:rgba(0,0,0,0.8);
+  box-shadow:0 0 7px 6px blueviolet;
 }
 
 .icon {
   padding:1.25rem;
   display:block;
   background:rgba(0,0,0,0.5);
-  box-shadow:0 0 40px 2px orange;
-  font-size:100px;
+  box-shadow:0 0 40px 2px ;
+  font-size:82px;
+  display:none;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
