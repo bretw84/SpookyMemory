@@ -83,10 +83,10 @@ function randomizeCards(arr, n) {
   }
 }
 
-function compareCards(card1,card2) {
+function compareCards(card1,card2, matches) {
   console.log('compareCards fired');
   if(card1 == card2) {
-    matchCards();
+    matchCards(matches);
   } else {
     noMatch();
   }
@@ -99,7 +99,14 @@ function matchCards() {
       $(this).removeClass('flipped');
       $(this).addClass('solved');
     });
-  },1500);
+  },1000);
+  matchesNeeded = $('.card').length / 2;
+  currentMatches = $('.solved').length / 2 + 1;
+  console.log("Number of matches: "+currentMatches);
+  console.log("Number of matches needed to win: "+matchesNeeded);
+  if(currentMatches >= matchesNeeded) {
+    bigWinner();
+  }
 }
 
 function noMatch() {
@@ -111,5 +118,13 @@ function noMatch() {
     $('.flipped').each(function() {
       $(this).removeClass('flipped').removeClass('noMatch');
     });
-  },1500);
+  },1000);
+}
+
+function bigWinner() {
+  console.log('bigWinner fired');
+  $('.bigWinner').show();
+  $('.card').each(function() {
+    $(this).addClass('faded');
+  })
 }
