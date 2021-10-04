@@ -1,2 +1,2 @@
 # SpookyMemory
-Vanilla Javascript Memory Game. Spooky themed for the Hacktober Holiday
+Javascript Memory Game. Spooky themed for the Hacktober Holiday
