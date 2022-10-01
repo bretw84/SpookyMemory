@@ -11,8 +11,8 @@ body {
 
 .setting {
   position:absolute;
-  top:0px;
-  right:25px;
+  top:-20px;
+  right:7px;
   font-size:22px;
   color:#FFFFFF;
   cursor:pointer;
@@ -53,14 +53,14 @@ h1.bigWinner {
     max-width:1200px;
     position:relative;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .card {
-    min-height:165px;
+    min-height:140px;
     cursor:url('../img/hand.png'), auto;
     margin:20px;
     box-shadow:0 0 7px 6px orange;
@@ -70,19 +70,25 @@ h1.bigWinner {
     background-position:center;
 }
 
-.flipped .icon {
-  display:block;
+.card.flipped:after {
   background:rgba(0,0,0,0.8);
+}
+
+.flipped .icon {
+  display:flex;  
   box-shadow:0 0 7px 6px blueviolet;
+  background:rgba(0,0,0,0.5);
   cursor:not-allowed;
 }
 
 .icon {
-  padding:1.25rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   display:block;
-  background:rgba(0,0,0,0.5);
   box-shadow:0 0 40px 2px ;
-  font-size:82px;
+  font-size:40px;
   display:none;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
@@ -92,7 +98,8 @@ h1.bigWinner {
 }
 
 .solved .icon {
-  display:block;
+  display:flex;
+  flex: 1;
   background:rgba(0,0,0,0.5);
   box-shadow:0 0 7px 6px green;
   cursor:not-allowed;
@@ -180,27 +187,36 @@ h1.bigWinner {
   
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
+  .container-fluid {
+    grid-template-columns: repeat(3,1fr);
+  }
 
-
-
+  .icon {
+    font-size:60px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-
-
-
+  
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+  .container-fluid {
+    grid-template-columns: repeat(4,1fr);
+  }
 
-
-
+  .icon {
+    font-size:82px;
+  }  
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-
+  .setting {
+    top:0px;
+    right:25px;
+  }
 }
