@@ -6,6 +6,11 @@ body {
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  background-image:url('../img/2022-background.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden; /* for snowflake spiders */
 }
 
 .setting {
@@ -70,17 +75,17 @@ h1.bigWinner {
 
 .card {
     min-height:140px;
-    cursor:url('../img/hand.png'), auto;
+    cursor:url('../img/frankensteinHand.png'), auto;
     margin:20px;
     box-shadow:0 0 7px 6px orange;
-    background-image:url('../img/cardback.png');
+    background-image:url('../img/card-back-2022.webp');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
 }
 
 .card.flipped:after {
-  background:rgba(0,0,0,0.8);
+  background:rgba(0,0,0,0.999);
 }
 
 .flipped .icon {
