@@ -6,7 +6,6 @@ body {
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  overflow:hidden;
 }
 
 .setting {
@@ -17,6 +16,16 @@ body {
   color:#FFFFFF;
   cursor:pointer;
   z-index:99;
+}
+
+#timer {
+  position:fixed;
+  top:5px;
+  left:5px;
+  background:rgba(0,0,0,0.8);
+  color:#fff;
+  padding:10px;
+  box-shadow:0 0 7px 6px blueviolet;
 }
 
 h1.bigWinner {
