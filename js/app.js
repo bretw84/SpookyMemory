@@ -37,18 +37,6 @@ $(document).ready(function() {
 
   $('.card').click(function() {
 
-    setInterval(startTimer, 10);
-    $('body').addClass('started');
-
-    if(!$('body').hasClass('started')) {
-      $('body').addClass('started');
-      clearInterval(Interval);
-      Interval = setInterval(startTimer, 10);
-     }
-
-    clearInterval(Interval);
-    Interval = setInterval(startTimer, 10);
-
     console.log('Card Clicked...')
 
     if($(this).hasClass('flipped') || $(this).hasClass('solved')) {

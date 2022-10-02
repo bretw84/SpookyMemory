@@ -1,10 +1,10 @@
 html,
 body {
     height: 100%;
-    background: url('../img/langing-bkd.jpg') no-repeat;
+    background: url('../img/horrorMovies.jpg') no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
-
+    background-color:#000;
 }
 
 body::before {
@@ -78,7 +78,7 @@ body::before {
     display: inline-block;
     text-transform: uppercase;
     color: black;
-    text-shadow: 2px 2px 0 #ffffff, 7px 7px 0 rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 0 #000, 7px 7px 0 rgba(0,0,0,0.1);
 }
 
 
@@ -274,11 +274,12 @@ body::before {
     left: 18%;
     bottom: 55%;
     font-family: "Eater", cursive;
-    font-size: 6.5vw;
+    font-size: 4.5vw;
     color: #111111;
     -moz-animation: flicker 4s 0s infinite;
     -webkit-animation: flicker 4s 0s infinite;
     animation: flicker 4s 0s infinite;
+    box-shadow:0 0 2px 0 #000;
   }
   
   .web-right {
