@@ -21,7 +21,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1.0"/>
     <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
-    <link rel="manifest" href="img/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#212121">
     <meta name="theme-color" content="#212121">
     <title>Spooky Memory</title>
@@ -46,8 +45,45 @@
     <span class="right setting ease"><i class="fas fa-spider on"></i></span>
     <div class="container-fluid text-center"><!-- game pieces go here --></div>
     <h1 class="bigWinner">You Win!!!<br><a href="index.html">Play Again?</a></h1>
+    <div id="timer"><span id="seconds">00</span>:<span id="tens">00</span></div>
     <script>
     $(document).ready(function() {
+        
+        var seconds = 00; 
+        var tens = 00; 
+        var appendTens = document.getElementById("tens")
+        var appendSeconds = document.getElementById("seconds")
+        var Interval ;
+          
+        clearInterval(Interval);
+        Interval = setInterval(startTimer, 10);
+
+        function startTimer () {
+          tens++; 
+          
+          if(tens <= 9){
+            appendTens.innerHTML = "0" + tens;
+          }
+          
+          if (tens > 9){
+            appendTens.innerHTML = tens;
+            
+          } 
+          
+          if (tens > 99) {
+            console.log("seconds");
+            seconds++;
+            appendSeconds.innerHTML = "0" + seconds;
+            tens = 0;
+            appendTens.innerHTML = "0" + 0;
+          }
+          
+          if (seconds > 9){
+            appendSeconds.innerHTML = seconds;
+          }
+        
+        }
+        
       $(".fa-spider").click(function(){
           console.log('clicked spidey');
         $(this).toggleClass('on');
